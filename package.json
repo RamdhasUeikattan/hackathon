@@ -4,10 +4,11 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve && dotnet run",
-    "build": "ng build --prod",
+    "start": "ng build && npm run dotnet",
+    "build": "ng build --dev",
     "test": "ng test",
     "lint": "ng lint",
+    "dotnet": "dotnet run",
     "e2e": "ng e2e"
   },
   "private": true,
