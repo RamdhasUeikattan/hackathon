@@ -1,14 +1,15 @@
 <div class="pos-f-t">
   <nav class="navbar sticky-top navbar-light bg-light">
-    <button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" (click)='onclick($event)'>
       <span class="navbar-toggler-icon"></span>
     </button>
     <span class="title">
       <h3>{{title}}</h3>
     </span>
-    <span class="oi oi-paperclip float-right"></span>
-    <span class="octicon-search float-right"></span>
   </nav>
-  <app-nav class="collapse" id="navbarToggleExternalContent" style="width: 200px"></app-nav>
+  <div *ngIf="boolean">
+    <app-nav class="collapse-in" id="navbarToggleExternalContent" style="width: 200px"></app-nav>
+  </div>
+  <app-content></app-content>
 </div>

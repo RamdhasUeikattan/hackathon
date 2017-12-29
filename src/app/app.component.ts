@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PodCast';
+  public boolean = false;
+
+  public onclick(args) {
+    this.boolean = !this.boolean;
+  }
 }
