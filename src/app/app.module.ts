@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { ListViewComponent, ListViewAllModule } from '@syncfusion/ej2-ng-lists';
 import { NavigationComponent } from './navigationtab/navigation';
@@ -19,7 +19,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ListViewAllModule
+    ListViewAllModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

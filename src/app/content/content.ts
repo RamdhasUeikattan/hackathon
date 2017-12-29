@@ -3,11 +3,28 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-content',
   template: `<div>
-  <ej-listview id='content-list' [dataSource]='data' [fields]='fields' showHeader='false'>
-                <ng-template #template let-data>
-                    <span class='{{data.class}} icon'><span class='media'>{{data.category}}</span></span>
-                </ng-template>
-            </ej-listview></div>`
+  <div>
+  <video width="400" controls>
+   <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
+  <video width="400" controls>
+   <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
+  <video width="400" controls>
+   <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
+  <video width="400" controls>
+   <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
+  <video width="400" controls>
+   <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
+  <video width="400" controls>
+   <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
+</div>
+</div>`,
+    styleUrls: ['./content.css']
 })
 export class ContentComponent {
     public data: Object[] = [];
