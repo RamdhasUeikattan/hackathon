@@ -1,0 +1,5 @@
+<ej-listview id='sample-list' [dataSource]='data' [fields]='fields' showHeader='true' headerTitle='Categories'>
+        <ng-template #template let-data>
+            <span class='{{data.class}} icon'><span class='media'>{{data.socialMedia}}</span></span>
+        </ng-template>
+</ej-listview>
