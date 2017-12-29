@@ -3,13 +3,40 @@
     <button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
       aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" (click)='onclick($event)'>
       <span class="navbar-toggler-icon"></span>
-    </button>
-    <span class="title">
+      </button>
+      <span class="title">
       <h3>{{title}}</h3>
     </span>
+      <label class="btn btn-default">
+	<input type="file" (change)="selectFile($event)">
+</label>
+
+      <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
   </nav>
-  <div *ngIf="boolean">
-    <app-nav class="collapse-in" id="navbarToggleExternalContent" style="width: 200px"></app-nav>
-  </div>
+    <div *ngIf="boolean">
+      <app-nav class="collapse-in" id="navbarToggleExternalContent" style="width: 200px"></app-nav>
+    </div>
+  <style>
+    .navbar-toggler.float-left {
+      margin-left: -100px;
+      margin-Right: 600px;
+    }
+    
+    h3 {
+      color: darkblue;
+      margin-left: -250px;
+      font-size: 3rem;
+    }
+    
+    .navbar.sticky-top {
+      background-color: skyblue !important;
+    }
+    
+    .btn-success.disabled,
+    .btn-success:disabled {
+      background-color: darkblue;
+      border-color: darkblue;
+    }
+  </style>
   <app-content></app-content>
 </div>
